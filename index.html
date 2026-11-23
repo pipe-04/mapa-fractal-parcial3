@@ -185,7 +185,7 @@ footer{font-size:.78rem;color:var(--muted)}
 
   <section id="mapa" aria-labelledby="h-map">
     <div class="section-head">
-      <div><h2 id="h-map">Las 16 informaciones</h2><p>Verde: la información está; amarillo: está parcial; rojo: falta. Seleccione una casilla para ver qué es, cómo se ve en Fractal 1, un ejemplo ajeno a AGP y por qué tiene ese color.</p></div>
+      <div><h2 id="h-map">Las 16 informaciones</h2><p>Verde: la información está; amarillo: está parcial; rojo: falta. Seleccione una casilla para ver su definición, lo que se encontró para Fractal 1 en AGP, un ejemplo externo y la decisión de color.</p></div>
       <div class="filters" id="filters" role="group" aria-label="Filtrar por color"></div>
     </div>
     <div class="map-layout">
@@ -256,10 +256,10 @@ function renderDetail(){
   document.getElementById("detail").innerHTML = `
     <div class="meta"><span class="pill ${it.color}"><span class="dot"></span>${CNAME[it.color]}</span><span>${sub[1]} · ${STAGES[it.stage]}</span></div>
     <h3>${it.name}</h3>
-    <div class="block"><h4>Qué es</h4><p>${it.que}</p></div>
-    <div class="block"><h4>Cómo se ve en Fractal 1</h4><p>${it.como}</p></div>
-    <div class="block"><h4>Ejemplo ajeno a AGP</h4><p>${it.ejemplo}</p>${links}</div>
-    <div class="block why ${it.color}"><h4>Por qué este color</h4><p>${it.porque}</p></div>
+    <div class="block"><p>${it.que}</p></div>
+    <div class="block"><h4>Para Fractal 1 en AGP:</h4><p>${it.como}</p></div>
+    <div class="block"><h4>Ejemplo externo:</h4><p>${it.ejemplo}</p>${links}</div>
+    <div class="block why ${it.color}"><h4>Decisión de Color:</h4><p>${it.porque}</p></div>
     <div class="meta">Se genera en el hito: ${st.name}${st.date?" ("+st.date+")":""}</div>`;
 }
 
